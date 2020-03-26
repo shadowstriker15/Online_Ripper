@@ -1,25 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="06e6c06b-7f60-4add-a7b1-d45e1b9ac394" name="Default Changelist" comment="" />
+    <list default="true" id="06e6c06b-7f60-4add-a7b1-d45e1b9ac394" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Django_Project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Django_Project/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Django_Project/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Django_Project/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RipperProject/RipperApp/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/RipperProject/RipperApp/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RipperProject/RipperApp/download.py" beforeDir="false" afterPath="$PROJECT_DIR$/RipperProject/RipperApp/download.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RipperProject/RipperApp/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/RipperProject/RipperApp/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RipperProject/RipperApp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/RipperProject/RipperApp/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RipperProject/RipperApp/templates/RipperApp/detail.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RipperProject/RipperApp/templates/RipperApp/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RipperProject/RipperApp/templates/RipperApp/link_create.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RipperProject/RipperApp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/RipperProject/RipperApp/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RipperProject/RipperApp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/RipperProject/RipperApp/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RipperProject/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/youtube_dl-2020.3.8.dist-info/DESCRIPTION.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/youtube_dl-2020.3.8.dist-info/INSTALLER" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/youtube_dl-2020.3.8.dist-info/METADATA" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/youtube_dl-2020.3.8.dist-info/RECORD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/youtube_dl-2020.3.8.dist-info/WHEEL" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/youtube_dl-2020.3.8.dist-info/entry_points.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/youtube_dl-2020.3.8.dist-info/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/youtube_dl-2020.3.8.dist-info/top_level.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/youtube_dl/extractor/bilibili.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/youtube_dl/extractor/bilibili.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/youtube_dl/extractor/cbc.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/youtube_dl/extractor/cbc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/youtube_dl/extractor/extractors.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/youtube_dl/extractor/extractors.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/youtube_dl/extractor/generic.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/youtube_dl/extractor/generic.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/youtube_dl/extractor/hellporno.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/youtube_dl/extractor/hellporno.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/youtube_dl/extractor/limelight.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/youtube_dl/extractor/limelight.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/youtube_dl/extractor/ndr.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/youtube_dl/extractor/ndr.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/youtube_dl/extractor/nhk.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/youtube_dl/extractor/nhk.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/youtube_dl/extractor/pokemon.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/youtube_dl/extractor/pokemon.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/youtube_dl/extractor/soundcloud.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/youtube_dl/extractor/soundcloud.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/youtube_dl/extractor/teachable.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/youtube_dl/extractor/teachable.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/youtube_dl/extractor/telequebec.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/youtube_dl/extractor/telequebec.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/youtube_dl/extractor/tfo.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/youtube_dl/extractor/tfo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/youtube_dl/extractor/vimeo.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/youtube_dl/extractor/vimeo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/youtube_dl/extractor/xtube.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/youtube_dl/extractor/xtube.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/youtube_dl/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/youtube_dl/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/youtube_dl/version.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/youtube_dl/version.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/youtube-dl.exe" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/youtube-dl.exe" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JavaScript File" />
         <option value="HTML File" />
         <option value="Python Script" />
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1Z8uLLLccN77gR9XD9ssiWBbr1E" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\austi\Projects\Django_Project\RipperProject\RipperApp\templates\RipperApp" />
+      <recent name="C:\Users\austi\Projects\Django_Project\RipperProject\RipperApp" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -75,11 +148,39 @@
       <workItem from="1584396374118" duration="12038000" />
       <workItem from="1584483783660" duration="6546000" />
       <workItem from="1584566780589" duration="1860000" />
-      <workItem from="1584574799599" duration="2826000" />
+      <workItem from="1584574799599" duration="3422000" />
+      <workItem from="1584734119786" duration="2459000" />
+      <workItem from="1584739091930" duration="6118000" />
+      <workItem from="1584758900727" duration="4195000" />
+      <workItem from="1584813179833" duration="3624000" />
+      <workItem from="1584822880973" duration="74000" />
+      <workItem from="1584823077529" duration="3708000" />
+      <workItem from="1584831436298" duration="10467000" />
+      <workItem from="1584847804724" duration="11928000" />
+      <workItem from="1584900602108" duration="3655000" />
+      <workItem from="1584906848718" duration="13225000" />
+      <workItem from="1584939649682" duration="83000" />
+      <workItem from="1585008769581" duration="7310000" />
+      <workItem from="1585023374860" duration="962000" />
+      <workItem from="1585166896989" duration="14400000" />
+      <workItem from="1585258555444" duration="2339000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

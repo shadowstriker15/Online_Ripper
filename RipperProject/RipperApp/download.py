@@ -1,12 +1,15 @@
 import youtube_dl
-# from tkinter import filedialog
-# from tkinter import *
 from pathlib import Path
+import datetime
+
 
 # Download data and config
+
+file_path = "C:/Users/austi/Downloads/%(title)s.%(ext)s"
+
 download_options = {
     'format': 'bestaudio/best',
-    'outtmpl': '%(title)s.%(ext)s',
+    'outtmpl': file_path,
     'nocheckcertificate': True,
     'download_archive': 'archive.txt',
     'postprocessors': [{
@@ -17,18 +20,15 @@ download_options = {
 }
 song_url = "https://www.youtube.com/playlist?list=PLl3Ghld2faMaoRei6-Fe5LAegMfb91yEg"
 
+path = "Users/austi/Downloads"
 
-def youtube(self, link):
-    # print(link)
-    # root = Tk()
-    # root.withdraw()
-    # folder_selected = filedialog.askdirectory()
-    # print(folder_selected)
-    home = str(Path.home())
-    print(home)
-    file_path = home
-    file_path = file_path + '\%(title)s.%(ext)s'
-    # print(file_path)
+date = datetime.date.today()
+
+
+def yt_download(link):
     # if file_path != "":
+    # home = str(Path.home())
+    # file_path = home
+    # file_path = file_path + '\%(title)s.%(ext)s'
     with youtube_dl.YoutubeDL(download_options) as dl:
         dl.download([link])
