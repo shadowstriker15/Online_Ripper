@@ -25,7 +25,7 @@ SECRET_KEY = '=31^xtucr*cu5rjwj25)bwdnt1)7_d!n6t=2dcf7r5kmrxf+8d'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['shadowStriker15.pythonanywhere.com']
 
 
 # Application definition
