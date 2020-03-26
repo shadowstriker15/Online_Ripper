@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+          crossorigin="anonymous">
+    <style>
+        form {
+            display: inline-block;
+
+        }
+    </style>
+</head>
+<body>
+<form method="POST" id="form1"> {% csrf_token %}
+    <li>{{ file_name }}</li>
+    <li>{{ form.as_p }}</li>
+    <input type="submit" class="btn btn-primary" value="Download" name="save" id="download"/>
+</form>
+{#    <form action="{% url 'edit' %}" method="post" enctype="multipart/form-data">#}
+{#        {% csrf_token %}#}
+{#        <p>{{ doc_form.non_field_errors }}</p>#}
+{##}
+{#        <p>{{ doc_form.docfile.label_tag }} {{ doc_form.docfile.help_text }}</p>#}
+{##}
+{#        <p>#}
+{#            {{ doc_form.docfile.errors }}#}
+{#            {{ doc_form.docfile }}#}
+{#        </p>#}
+{##}
+{#        <p><input type="submit" value="Upload album cover"/></p>#}
+{#    </form>#}
+    <form action="/next/" method="get" id="form2">
+        <input type="submit" class="btn btn-secondary" name="next" value="Next" id="Next"/>
+    </form>
+
+</body>
+</html>
