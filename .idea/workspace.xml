@@ -1,9 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="06e6c06b-7f60-4add-a7b1-d45e1b9ac394" name="Default Changelist" comment="">
+    <list default="true" id="06e6c06b-7f60-4add-a7b1-d45e1b9ac394" name="Default Changelist" comment="Updated - 3/26 Adding files">
+      <change afterPath="$PROJECT_DIR$/RipperProject/RipperApp/get_album.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RipperProject/RipperApp/static/RipperApp/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RipperProject/RipperApp/templates/RipperApp/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RipperProject/users/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RipperProject/users/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RipperProject/users/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RipperProject/users/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RipperProject/users/templates/users/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RipperProject/users/templates/users/logout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RipperProject/users/templates/users/register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RipperProject/users/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RipperProject/users/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Django_Project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Django_Project/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RipperProject/RipperApp/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/RipperProject/RipperApp/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RipperProject/RipperApp/download.py" beforeDir="false" afterPath="$PROJECT_DIR$/RipperProject/RipperApp/download.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RipperProject/RipperApp/edit_song.py" beforeDir="false" afterPath="$PROJECT_DIR$/RipperProject/RipperApp/edit_song.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RipperProject/RipperApp/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/RipperProject/RipperApp/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RipperProject/RipperApp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/RipperProject/RipperApp/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RipperProject/RipperApp/templates/RipperApp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/RipperProject/RipperApp/templates/RipperApp/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RipperProject/RipperApp/templates/RipperApp/song_edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/RipperProject/RipperApp/templates/RipperApp/song_edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RipperProject/RipperApp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/RipperProject/RipperApp/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RipperProject/RipperApp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/RipperProject/RipperApp/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RipperProject/RipperProject/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/RipperProject/RipperProject/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RipperProject/RipperProject/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/RipperProject/RipperProject/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RipperProject/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/RipperProject/db.sqlite3" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,8 +55,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
         <option value="Python Script" />
       </list>
     </option>
@@ -124,7 +148,9 @@
       <workItem from="1585023374860" duration="962000" />
       <workItem from="1585166896989" duration="14400000" />
       <workItem from="1585258555444" duration="3124000" />
-      <workItem from="1585265911450" duration="200000" />
+      <workItem from="1585265911450" duration="18374000" />
+      <workItem from="1585326800501" duration="494000" />
+      <workItem from="1585327380072" duration="24190000" />
     </task>
     <task id="LOCAL-00001" summary="Updated - 3/26">
       <created>1585260946175</created>
@@ -147,7 +173,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585266101564</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Updated - 3/26 Adding files">
+      <created>1585266122235</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1585266122235</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

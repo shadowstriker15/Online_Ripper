@@ -1,18 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Youtube Ripper</title>
-    <link rel="stylesheet"
-          href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-          crossorigin="anonymous">
-</head>
-<body>
-
-<div class="container">
+{% extends "RipperApp/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="container">
     <div>
         <h1>Youtube Ripper</h1>
     </div>
@@ -21,21 +10,13 @@
             {{ link_form }} <input class="btn btn-primary" type="submit" value="Download"/>
         </form>
     </div>
-{#    <!-- Upload form-->#}
-{#    <form action="{% url 'index' %}" method="post" enctype="multipart/form-data">#}
-{#        {% csrf_token %}#}
-{#        <p>{{ doc_form.non_field_errors }}</p>#}
-{##}
-{#        <p>{{ doc_form.docfile.label_tag }} {{ doc_form.docfile.help_text }}</p>#}
-{##}
-{#        <p>#}
-{#            {{ doc_form.docfile.errors }}#}
-{#            {{ doc_form.docfile }}#}
-{#        </p>#}
-{##}
-{#        <p><input type="submit" value="Upload archive.txt"/></p>#}
-{#    </form>#}
-
-
-</body>
-</html>
+    {% if messages %}
+        {% for message in messages %}
+            {% if message.message == 'Download complete!' %}
+                <form action="/edit">
+                    <input class="btn btn-secondary" type="submit" value="Continue"/>
+                </form>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+{% endblock content %}

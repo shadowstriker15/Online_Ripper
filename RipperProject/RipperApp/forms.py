@@ -1,4 +1,5 @@
 from django import forms
+from django.core.exceptions import ValidationError
 
 from .models import Link
 
@@ -15,7 +16,7 @@ class RawLinkForm(forms.Form):
     def clean_link(self):
         link = self.cleaned_data.get("link")
         if not "youtube.com" in link:
-            raise forms.ValidationError("This is not a valid YouTube link")
+            raise ValidationError("This is not a valid YouTube link")
         return link
 
 
@@ -36,9 +37,3 @@ class RawSongForm(forms.Form):
                             widget=forms.TextInput()
                             )
     # genre
-
-
-class DocumentForm(forms.Form):
-    # docfile = forms.FileField(label='Select archive.txt file')
-    docfile = forms.FileField(widget=forms.FileInput(attrs={'accept':'.jpg'}),
-                              label='Select .jpeg file')

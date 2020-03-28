@@ -1,34 +1,27 @@
 import youtube_dl
 from pathlib import Path
-import datetime
+import os
 
 
-# Download data and config
+def yt_download(link, account):
+    home = str(Path.home())
+    user = str(account)
 
-file_path = "C:/Users/austi/Downloads/%(title)s.%(ext)s"
+    archive_path = os.path.join(home, 'Users', user, 'Downloads', 'archive.txt')
+    out_path = os.path.join(home, 'Users', user, 'Downloads', '%(title)s.%(ext)s')
 
-download_options = {
-    'format': 'bestaudio/best',
-    'outtmpl': file_path,
-    'nocheckcertificate': True,
-    'download_archive': 'archive.txt',
-    'postprocessors': [{
-        'key': 'FFmpegExtractAudio',
-        'preferredcodec': 'mp3',
-        'preferredquality': '192',
-    }]
-}
-song_url = "https://www.youtube.com/playlist?list=PLl3Ghld2faMaoRei6-Fe5LAegMfb91yEg"
+    # Download data and config
+    download_options = {
+        'format': 'bestaudio/best',
+        'outtmpl': out_path,
+        'nocheckcertificate': True,
+        'download_archive': archive_path,
+        'postprocessors': [{
+            'key': 'FFmpegExtractAudio',
+            'preferredcodec': 'mp3',
+            'preferredquality': '192',
+        }]
+    }
 
-path = "Users/austi/Downloads"
-
-date = datetime.date.today()
-
-
-def yt_download(link):
-    # if file_path != "":
-    # home = str(Path.home())
-    # file_path = home
-    # file_path = file_path + '\%(title)s.%(ext)s'
     with youtube_dl.YoutubeDL(download_options) as dl:
         dl.download([link])
