@@ -6,8 +6,8 @@ import os
 
 
 def get_album(album, user):
-    client_id = "4b77fc0551f04b0b8778ba9edc045c23"
-    client_secret = "f80bf5aabe724f7c89f2eb128639925d"
+    client_id = ""
+    client_secret = ""
     client_credentials_manager = SpotifyClientCredentials(client_id=client_id, client_secret=client_secret)
     sp = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
 
