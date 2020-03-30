@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="06e6c06b-7f60-4add-a7b1-d45e1b9ac394" name="Default Changelist" comment="" />
+    <list default="true" id="06e6c06b-7f60-4add-a7b1-d45e1b9ac394" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +46,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -124,6 +127,8 @@
       <workItem from="1585265911450" duration="18374000" />
       <workItem from="1585326800501" duration="494000" />
       <workItem from="1585327380072" duration="27061000" />
+      <workItem from="1585607945649" duration="679000" />
+      <workItem from="1585608643150" duration="1128000" />
     </task>
     <task id="LOCAL-00001" summary="Updated - 3/26">
       <created>1585260946175</created>
