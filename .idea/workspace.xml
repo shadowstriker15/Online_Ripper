@@ -128,7 +128,7 @@
       <workItem from="1585326800501" duration="494000" />
       <workItem from="1585327380072" duration="27061000" />
       <workItem from="1585607945649" duration="679000" />
-      <workItem from="1585608643150" duration="1128000" />
+      <workItem from="1585608643150" duration="2750000" />
     </task>
     <task id="LOCAL-00001" summary="Updated - 3/26">
       <created>1585260946175</created>
@@ -172,7 +172,21 @@
       <option name="project" value="LOCAL" />
       <updated>1585375178787</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Added requirements.txt">
+      <created>1585610362454</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1585610362454</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Added requirements.txt">
+      <created>1585610430624</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1585610430624</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -195,6 +209,7 @@
     <MESSAGE value="Updated - 3/26" />
     <MESSAGE value="Updated - 3/26 Adding files" />
     <MESSAGE value="User authentication added, nav bar added, base template added, progress on album cover download" />
-    <option name="LAST_COMMIT_MESSAGE" value="User authentication added, nav bar added, base template added, progress on album cover download" />
+    <MESSAGE value="Added requirements.txt" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added requirements.txt" />
   </component>
 </project>
