@@ -15,7 +15,7 @@ def get_album(album, user):
     cover = str(results['albums']['items'][0]['images'][0]['url'])
 
     home = str(Path.home())
-    path = os.path.join(home, 'Users', user, 'Downloads')
+    path = os.path.join(home, 'Users', user, 'Downloads', "album.jpg")
 
-    urllib.request.urlretrieve(cover, os.path.join(path, "album.jpg"))
+    urllib.request.urlretrieve(cover, path)
     return path

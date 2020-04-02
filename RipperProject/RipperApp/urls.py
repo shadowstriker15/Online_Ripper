@@ -8,6 +8,7 @@ urlpatterns = [
     path('edit/', views.song_edit_view, name='edit'),
     path('next/', views.next_page),
     path('home/', views.home_view),
+    path('about/', views.about_view),
     # path('list/', views.list, name='list'),
     ]
 

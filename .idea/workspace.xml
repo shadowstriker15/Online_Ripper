@@ -2,7 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="06e6c06b-7f60-4add-a7b1-d45e1b9ac394" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/RipperProject/RipperApp/templates/RipperApp/about.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RipperProject/RipperApp/edit_song.py" beforeDir="false" afterPath="$PROJECT_DIR$/RipperProject/RipperApp/edit_song.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RipperProject/RipperApp/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/RipperProject/RipperApp/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RipperProject/RipperApp/get_album.py" beforeDir="false" afterPath="$PROJECT_DIR$/RipperProject/RipperApp/get_album.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RipperProject/RipperApp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/RipperProject/RipperApp/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RipperProject/RipperApp/templates/RipperApp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/RipperProject/RipperApp/templates/RipperApp/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RipperProject/RipperApp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/RipperProject/RipperApp/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RipperProject/RipperApp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/RipperProject/RipperApp/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RipperProject/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/RipperProject/db.sqlite3" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,9 +39,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="JavaScript File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -128,7 +137,8 @@
       <workItem from="1585326800501" duration="494000" />
       <workItem from="1585327380072" duration="27061000" />
       <workItem from="1585607945649" duration="679000" />
-      <workItem from="1585608643150" duration="2750000" />
+      <workItem from="1585608643150" duration="4349000" />
+      <workItem from="1585785276566" duration="6683000" />
     </task>
     <task id="LOCAL-00001" summary="Updated - 3/26">
       <created>1585260946175</created>
@@ -186,7 +196,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585610430624</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Changed requirements.txt">
+      <created>1585613723804</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1585613723804</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -210,6 +227,7 @@
     <MESSAGE value="Updated - 3/26 Adding files" />
     <MESSAGE value="User authentication added, nav bar added, base template added, progress on album cover download" />
     <MESSAGE value="Added requirements.txt" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added requirements.txt" />
+    <MESSAGE value="Changed requirements.txt" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed requirements.txt" />
   </component>
 </project>

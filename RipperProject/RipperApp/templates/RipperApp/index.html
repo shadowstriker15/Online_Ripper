@@ -10,6 +10,9 @@
             {{ link_form }} <input class="btn btn-primary" type="submit" value="Download"/>
         </form>
     </div>
+    <div class="text-muted">
+    <p>Please wait for completion prompt after initiating download.</p>
+    </div>
     {% if messages %}
         {% for message in messages %}
             {% if message.message == 'Download complete!' %}

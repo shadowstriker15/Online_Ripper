@@ -3,11 +3,12 @@ import os
 import eyed3
 
 
-def editor(artist, title, album, path_list, album_path):
+def editor(artist, title, album, genre, path_list, album_path):
     audio_file = eyed3.load(path_list[0])
     audio_file.tag.artist = artist
     audio_file.tag.title = title
     audio_file.tag.album = album
+    audio_file.tag.genre = genre
 
     # filename = os.path.basename(picture_path)
 

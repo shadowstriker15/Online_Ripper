@@ -82,8 +82,9 @@ def song_edit_view(request):
             artist = song_form.cleaned_data['artist']
             title = song_form.cleaned_data['title']
             album = song_form.cleaned_data['album']
+            genre = song_form.cleaned_data['genre']
             album_path = get_album(album, user)
-            editor(artist, title, album, path_list, album_path)
+            editor(artist, title, album, genre, path_list, album_path)
             Song.objects.create(**song_form.cleaned_data)
             # real_download(request, path_list[0])
             response = HttpResponse(open(path_list[0], 'rb').read())
@@ -114,3 +115,7 @@ def next_page(request):
     # if request.GET.get('next'):
     #     pass
     return song_edit_view(request)
+
+
+def about_view(request):
+    return render(request, 'RipperApp/about.html')

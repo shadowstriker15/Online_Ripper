@@ -1,7 +1,7 @@
 from django import forms
 from django.core.exceptions import ValidationError
 
-from .models import Link
+from .models import Link, Song
 
 
 class RawLinkForm(forms.Form):
@@ -21,11 +21,6 @@ class RawLinkForm(forms.Form):
 
 
 class RawSongForm(forms.Form):
-    genres = ["Alternative", "Blues/R&B", "Books & Spoken", "Children's Music", "Classic Rock",
-              "Classic Rock/Rock", "Classical", "Country", "Dance", "Easy Listening", "Electronic", "Folk",
-              "Hip Hop/Rap", "Holiday", "House", "Industrial", "Jazz", "Leftfield", "New Age", "Other", "Pop",
-              "Pop/Rock", "R&B", "R&B/Soul", "Religious", "Rock", "Rock & Roll", "Soundtrack", "Techno", "Trance",
-              "Unclassifiable", "Vocal", "World"]
 
     artist = forms.CharField(max_length=100,
                              widget=forms.TextInput()
@@ -36,4 +31,4 @@ class RawSongForm(forms.Form):
     album = forms.CharField(max_length=100,
                             widget=forms.TextInput()
                             )
-    # genre
+    genre = forms.ChoiceField(choices=Song.genreList)
