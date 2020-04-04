@@ -2,24 +2,58 @@
 {% load crispy_forms_tags %}
 {% block content %}
     <div class="container">
-    <div>
-        <h1>Youtube Ripper</h1>
-    </div>
-    <div>
-        <form method="POST"> {% csrf_token %}
-            {{ link_form }} <input class="btn btn-primary" type="submit" value="Download"/>
-        </form>
-    </div>
-    <div class="text-muted">
-    <p>Please wait for completion prompt after initiating download.</p>
-    </div>
-    {% if messages %}
-        {% for message in messages %}
-            {% if message.message == 'Download complete!' %}
-                <form action="/edit">
-                    <input class="btn btn-secondary" type="submit" value="Continue"/>
+
+        <div class="text-center">
+            <h1>Welcome to Song Ripper!</h1>
+        </div>
+
+        <br>
+
+        <div>
+            <p>
+                Simply plug in a YouTube song or playlist link below and click
+                enter to initiate the process. Before downloading the songs, you will be able to
+                manipulate the downloaded mp3 files' metadata to your liking. Please note, the
+                <em>Album</em> field is how Song Ripper will be able to retrieve the album cover through
+                Spotify's open API.<span class="caution"> By making sure your spelling is correct,
+                Song Ripper will be able to locate the album by your specified input.</span> Song Ripper's
+                features really shine when using YouTube playlists. When using playlists, whenever new
+                videos have been added, Song Ripper will remember previously downloaded songs to prevent
+                any redownloading. Song Ripper also allows for multiple playlists to be used and
+                be remembered!
+            </p>
+
+        </div>
+
+        <br>
+
+        <div class="row">
+            <div class="mx-auto">
+                <form method="POST"> {% csrf_token %}
+                    {{link_form|crispy}}
                 </form>
+            </div>
+        </div>
+
+        <div class="text-muted text-center">
+            <p>Please wait for completion prompt after initiating download</p>
+        </div>
+
+        <div>
+            {% if messages %}
+                {% for message in messages %}
+                    {% if message.message == 'Download complete!' %}
+                        <form action="/edit" class="float-right">
+                            <input class="btn btn-secondary" type="submit" value="Continue"/>
+                        </form>
+                    {% endif %}
+                {% endfor %}
             {% endif %}
-        {% endfor %}
-    {% endif %}
+        </div>
+
+        <br>
+        <br>
+
+    </div>
+
 {% endblock content %}

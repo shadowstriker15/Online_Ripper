@@ -7,17 +7,18 @@ from django.urls import reverse
 import os
 import glob
 from .download import yt_download
-from .get_album import get_album
+from .get_cover import find_cover
 from .edit_song import editor
 from .models import Link, Song
-from .forms import RawLinkForm, RawSongForm
+from .forms import RawLinkForm, RawSongForm, FindAlbumsForm
 from django.contrib import messages
 from pathlib import Path
+from .get_albums import find_albums
 
 
 def home_view(request, account_name=None):
     if not request.user.is_authenticated:
-        messages.info(request, f'Please register or login to download.')
+        messages.info(request, f'Please register or login to download')
     current_user = request.user
     link_form = RawLinkForm()
     context = {
@@ -32,88 +33,100 @@ def home_view(request, account_name=None):
         link_form = RawLinkForm(request.POST)
         if link_form.is_valid():
             if not request.user.is_authenticated:
-                messages.error(request, f'You must be logged in to download.')
+                messages.error(request, f'You must be logged in to download')
             else:
                 Link.objects.create(**link_form.cleaned_data)
                 link = link_form.cleaned_data['link']
                 yt_download(link, current_user)
                 messages.info(request, f'Download complete!')
+        else:
+            context.update({'link_form': link_form})
 
     return render(request, 'RipperApp/index.html', context)
 
 
 def song_edit_view(request):
-    form = RawSongForm()
+    song_form = RawSongForm()
+    artist_form = FindAlbumsForm()
     context = {
-        'form': form
+        'song_form': song_form,
+        'path_num': 1,
+        'artist_form': artist_form
     }
     current_user = request.user
-    home = str(Path.home())
     user = str(current_user)
 
+    file_list = get_song_list(request)
+    path_list = get_path_list(request)
+
+    if len(path_list) != 0:
+        file_name = file_list[0]
+        context.update({"file_name": file_name})
+    else:
+        context.update({'path_num': 0})
+        messages.info(request, f'No more new downloaded songs')
+
+    if request.method == "POST":
+        song_form_post = RawSongForm(request.POST)
+        artist_form_post = FindAlbumsForm(request.POST)
+
+        if artist_form_post.is_valid():
+            print("That's an artist name!")
+            artist = artist_form_post.cleaned_data['find_artist']
+            album_list = find_albums(artist)
+            print(album_list, "TaDa!")
+            context.update({'album_list': album_list})
+
+        if song_form_post.is_valid():
+            artist = song_form_post.cleaned_data['artist']
+            album = song_form_post.cleaned_data['album']
+            album_path = find_cover(album, user)
+            if not album_path:
+                messages.error(request, f'Album cover was not found')
+
+            title = song_form_post.cleaned_data['title']
+            genre = song_form_post.cleaned_data['genre']
+
+            editor(artist, title, album, genre, path_list, album_path)
+            Song.objects.create(**song_form_post.cleaned_data)
+
+            response = HttpResponse(open(path_list[0], 'rb').read())
+            response['Content-Type'] = 'audio/mpeg'
+            file_name = title + '.mp3'
+            response['Content-Disposition'] = "attachment; filename=\"" + file_name + "\""
+            # os.remove(path_list[0])
+            return response
+    return render(request, 'RipperApp/song_edit.html', context)
+
+
+def get_path_list(request):
+    home = str(Path.home())
+    user = str(request.user)
     path = os.path.join(home, 'Users', user, 'Downloads', '*mp3')
-    path_list = glob.glob(path)
+    return glob.glob(path)
+
+
+def get_song_list(request):
+    path_list = get_path_list(request)
     file_list = []
     for path in path_list:
         file_name = os.path.basename(path)
         file_list.append(file_name)
-
-    context.update({"path_list": path_list})
-    print(file_list, "this is file list")
-    if len(file_list) != 0:
-        file_name = file_list[0]
-        context.update({"file_name": file_name})
-    else:
-        messages.info(request, f'No more new downloaded songs.')
-
-    if request.method == "POST":
-
-        # doc_form = DocumentForm(request.POST, request.FILES)
-        #
-        # context.update({'doc_form': doc_form})
-
-        song_form = RawSongForm(request.POST)
-
-        # if doc_form.is_valid():
-        #     new_doc = Document(docfile=request.FILES['docfile'])
-        #     new_doc.save()
-
-        if song_form.is_valid():
-            artist = song_form.cleaned_data['artist']
-            title = song_form.cleaned_data['title']
-            album = song_form.cleaned_data['album']
-            genre = song_form.cleaned_data['genre']
-            album_path = get_album(album, user)
-            editor(artist, title, album, genre, path_list, album_path)
-            Song.objects.create(**song_form.cleaned_data)
-            # real_download(request, path_list[0])
-            response = HttpResponse(open(path_list[0], 'rb').read())
-            response['Content-Type'] = 'audio/mpeg'
-            file_name = str(file_name)
-            response['Content-Disposition'] = "attachment; filename=\"" + file_name + "\""
-            os.remove(path_list[0])
-            return response
-
-    return render(request, 'RipperApp/song_edit.html', context)
-
-
-def real_download(request, path=None):
-    # if path is None:
-    #     raise Http404
-    # else:
-    # path = path.replace(os.sep, "/")
-    # print(path)
-    response = HttpResponse(open(path, 'rb').read())
-    response['Content-Type'] = 'audio/mpeg'
-    response['Content-Disposition'] = 'attachment; filename=DownloadedSong.mp3'
-    # os.remove(path_list[0])
-    return response
+    return file_list
 
 
 def next_page(request):
-    # Clicked next button
-    # if request.GET.get('next'):
-    #     pass
+    path_list = get_path_list(request)
+
+    if len(path_list) == 1:
+        os.remove(path_list[0])
+    else:
+        print("Removing a song!")
+        os.remove(path_list[0])
+    return song_edit_view(request)
+
+
+def download_view(request):
     return song_edit_view(request)
 
 
