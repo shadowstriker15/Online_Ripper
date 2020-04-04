@@ -1,4 +1,4 @@
-from django.urls import path, re_path, include
+from django.urls import path
 from . import views
 
 
@@ -10,6 +10,5 @@ urlpatterns = [
     path('about/', views.about_view),
     path('download/', views.download_view),
     path('get-albums/', views.download_view)
-    # path('list/', views.list, name='list'),
     ]
 

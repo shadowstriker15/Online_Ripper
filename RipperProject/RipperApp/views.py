@@ -1,18 +1,14 @@
-from django import forms
-from django.shortcuts import render
-from django.conf import settings
-from django.http import HttpResponse, HttpResponseRedirect, Http404
-from django.template import RequestContext
-from django.urls import reverse
 import os
 import glob
+from django.shortcuts import render
+from django.http import HttpResponse
+from django.contrib import messages
+from .models import Link, Song
+from .forms import RawLinkForm, RawSongForm, FindAlbumsForm
+from pathlib import Path
 from .download import yt_download
 from .get_cover import find_cover
 from .edit_song import editor
-from .models import Link, Song
-from .forms import RawLinkForm, RawSongForm, FindAlbumsForm
-from django.contrib import messages
-from pathlib import Path
 from .get_albums import find_albums
 
 
@@ -24,9 +20,6 @@ def home_view(request, account_name=None):
     context = {
         'link_form': link_form
     }
-    # if not account_name:
-    #     error = 'Create or sign into an account'
-    #     context.update({'error': error})
 
     if request.method == 'POST':
 
@@ -59,6 +52,7 @@ def song_edit_view(request):
     file_list = get_song_list(request)
     path_list = get_path_list(request)
 
+    # Check to see if any downloaded mp3s
     if len(path_list) != 0:
         file_name = file_list[0]
         context.update({"file_name": file_name})
@@ -96,11 +90,12 @@ def song_edit_view(request):
             response['Content-Type'] = 'audio/mpeg'
             file_name = title + '.mp3'
             response['Content-Disposition'] = "attachment; filename=\"" + file_name + "\""
-            # os.remove(path_list[0])
             return response
+
     return render(request, 'RipperApp/song_edit.html', context)
 
 
+# Used to find mp3s in user's Downloads
 def get_path_list(request):
     home = str(Path.home())
     user = str(request.user)
@@ -108,6 +103,7 @@ def get_path_list(request):
     return glob.glob(path)
 
 
+# Used to get file names
 def get_song_list(request):
     path_list = get_path_list(request)
     file_list = []
@@ -120,14 +116,15 @@ def get_song_list(request):
 def next_page(request):
     path_list = get_path_list(request)
 
+    # Check if there is a next song
     if len(path_list) == 1:
         os.remove(path_list[0])
     else:
-        print("Removing a song!")
         os.remove(path_list[0])
     return song_edit_view(request)
 
 
+# Used to prevent next_page getting called
 def download_view(request):
     return song_edit_view(request)
 

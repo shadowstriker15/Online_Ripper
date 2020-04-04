@@ -4,11 +4,14 @@ import os
 from urllib.parse import urlsplit
 
 
+# Used to download and convert YouTube videos
+
 def yt_download(link, account):
     home = str(Path.home())
     user = str(account)
     out_path = os.path.join(home, 'Users', user, 'Downloads', '%(title)s.%(ext)s')
 
+    # Create archive if a playlist link
     if "playlist" in link:
         parse_result = urlsplit(link)
         query = parse_result.query

@@ -5,6 +5,8 @@ from pathlib import Path
 import os
 
 
+# Used to find and download an album cover
+
 def find_cover(album, user):
     client_id = ""
     client_secret = ""
@@ -12,6 +14,8 @@ def find_cover(album, user):
     sp = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
 
     results = sp.search(q='album:' + album, type='album')
+
+    # Checking if valid album
     if len(results['albums']['items']) == 0:
         return None
     else:

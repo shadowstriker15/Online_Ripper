@@ -2,6 +2,8 @@ import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
 
 
+# Used to find artist's albums by Spotify's API
+
 def find_albums(name):
     client_id = ""
     client_secret = ""
@@ -10,6 +12,7 @@ def find_albums(name):
     results = sp.search(q='artist:' + name, type='artist')
     items = results['artists']['items']
 
+    # Checking if valid artist
     if len(items) != 0:
         artist = items[0]
         albums = []

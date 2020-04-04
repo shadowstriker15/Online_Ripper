@@ -13,7 +13,8 @@ class RawLinkForm(forms.Form):
     link = forms.URLField(max_length=500,
                           widget=forms.TextInput(
                               attrs={
-                                  "placeholder": "Enter YouTube link here ex: https://www.youtube.com/a-song-or-playlist-link",
+                                  "placeholder": "Enter YouTube link here ex: "
+                                                 "https://www.youtube.com/a-song-or-playlist-link",
                                   'size': 80,
                               }
                           )
