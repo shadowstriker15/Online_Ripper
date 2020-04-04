@@ -38,7 +38,7 @@ def home_view(request, account_name=None):
                 Link.objects.create(**link_form.cleaned_data)
                 link = link_form.cleaned_data['link']
                 yt_download(link, current_user)
-                messages.info(request, f'Download complete!')
+                messages.info(request, f"Download complete! Click 'Continue'")
         else:
             context.update({'link_form': link_form})
 
@@ -71,11 +71,13 @@ def song_edit_view(request):
         artist_form_post = FindAlbumsForm(request.POST)
 
         if artist_form_post.is_valid():
-            print("That's an artist name!")
             artist = artist_form_post.cleaned_data['find_artist']
+            context.update({'artist_name': artist})
             album_list = find_albums(artist)
-            print(album_list, "TaDa!")
-            context.update({'album_list': album_list})
+            if not album_list:
+                messages.error(request, f'Artist not found')
+            else:
+                context.update({'album_list': album_list})
 
         if song_form_post.is_valid():
             artist = song_form_post.cleaned_data['artist']

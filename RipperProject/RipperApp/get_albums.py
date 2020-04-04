@@ -32,4 +32,4 @@ def find_albums(name):
         return album_names
 
     else:
-        print("not a valid artist") #!!!!
+        return None

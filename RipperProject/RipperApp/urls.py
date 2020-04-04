@@ -8,7 +8,8 @@ urlpatterns = [
     path('next/', views.next_page),
     path('home/', views.home_view),
     path('about/', views.about_view),
-    path('download/', views.download_view)
+    path('download/', views.download_view),
+    path('get-albums/', views.download_view)
     # path('list/', views.list, name='list'),
     ]
 
