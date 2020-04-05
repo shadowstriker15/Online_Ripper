@@ -31,25 +31,7 @@ class RawSongForm(forms.Form):
     artist = forms.CharField(max_length=100,
                              widget=forms.TextInput()
                              )
-    album = forms.CharField(max_length=100,
-                            widget=forms.TextInput()
-                            )
     title = forms.CharField(max_length=100,
                             widget=forms.TextInput()
                             )
     genre = forms.ChoiceField(choices=Song.genreList)
-
-
-class FindAlbumsForm(forms.Form):
-
-    def __init__(self, *args, **kwargs):
-        super(FindAlbumsForm, self).__init__(*args, **kwargs)
-        self.fields['find_artist'].label = ""
-
-    find_artist = forms.CharField(max_length=100,
-                                  widget=forms.TextInput(
-                                      attrs={
-                                          "placeholder": "Artist name here",
-                                      }
-                                  )
-                                  )

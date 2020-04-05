@@ -4,12 +4,12 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.contrib import messages
 from .models import Link, Song
-from .forms import RawLinkForm, RawSongForm, FindAlbumsForm
+from .forms import RawLinkForm, RawSongForm
 from pathlib import Path
 from .download import yt_download
 from .get_cover import find_cover
 from .edit_song import editor
-from .get_albums import find_albums
+from .find_album import get_album
 
 
 def home_view(request, account_name=None):
@@ -40,11 +40,9 @@ def home_view(request, account_name=None):
 
 def song_edit_view(request):
     song_form = RawSongForm()
-    artist_form = FindAlbumsForm()
     context = {
         'song_form': song_form,
         'path_num': 1,
-        'artist_form': artist_form
     }
     current_user = request.user
     user = str(current_user)
@@ -62,29 +60,19 @@ def song_edit_view(request):
 
     if request.method == "POST":
         song_form_post = RawSongForm(request.POST)
-        artist_form_post = FindAlbumsForm(request.POST)
-
-        if artist_form_post.is_valid():
-            artist = artist_form_post.cleaned_data['find_artist']
-            context.update({'artist_name': artist})
-            album_list = find_albums(artist)
-            if not album_list:
-                messages.error(request, f'Artist not found')
-            else:
-                context.update({'album_list': album_list})
 
         if song_form_post.is_valid():
             artist = song_form_post.cleaned_data['artist']
-            album = song_form_post.cleaned_data['album']
-
-            # Uses album name and artist name to retrieve cover
-            album = album + " " + artist
-            album_path = find_cover(album, user)
-            if not album_path:
-                messages.error(request, f'Album cover was not found')
-
             title = song_form_post.cleaned_data['title']
             genre = song_form_post.cleaned_data['genre']
+
+            album, cover_link = get_album(artist, title)
+
+            if not cover_link:
+                messages.error(request, f'Could not set album name and cover')
+                album_path = None
+            else:
+                album_path = find_cover(cover_link, user)
 
             editor(artist, title, album, genre, path_list, album_path)
             Song.objects.create(**song_form_post.cleaned_data)

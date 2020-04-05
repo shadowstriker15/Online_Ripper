@@ -43,5 +43,4 @@ class Song(models.Model):
 
     artist = models.CharField(max_length=100)
     title = models.CharField(max_length=100)
-    album = models.CharField(max_length=100)
     genre = models.CharField(max_length=100, choices=genreList, default=" ")
