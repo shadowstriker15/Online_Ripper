@@ -3,25 +3,21 @@
   <component name="ChangeListManager">
     <list default="true" id="06e6c06b-7f60-4add-a7b1-d45e1b9ac394" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RipperProject/RipperApp/delete_downloads.py" beforeDir="false" afterPath="$PROJECT_DIR$/RipperProject/RipperApp/delete_downloads.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RipperProject/RipperApp/download.py" beforeDir="false" afterPath="$PROJECT_DIR$/RipperProject/RipperApp/download.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RipperProject/RipperApp/edit_song.py" beforeDir="false" afterPath="$PROJECT_DIR$/RipperProject/RipperApp/edit_song.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RipperProject/RipperApp/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/RipperProject/RipperApp/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RipperProject/RipperApp/get_albums.py" beforeDir="false" afterPath="$PROJECT_DIR$/RipperProject/RipperApp/get_albums.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RipperProject/RipperApp/get_cover.py" beforeDir="false" afterPath="$PROJECT_DIR$/RipperProject/RipperApp/get_cover.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RipperProject/RipperApp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/RipperProject/RipperApp/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RipperProject/RipperApp/static/RipperApp/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/RipperProject/RipperApp/static/RipperApp/CSS/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RipperProject/RipperApp/templates/RipperApp/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/RipperProject/RipperApp/templates/RipperApp/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RipperProject/RipperApp/templates/RipperApp/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/RipperProject/RipperApp/templates/RipperApp/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RipperProject/RipperApp/templates/RipperApp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/RipperProject/RipperApp/templates/RipperApp/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RipperProject/RipperApp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/RipperProject/RipperApp/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RipperProject/RipperApp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/RipperProject/RipperApp/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RipperProject/RipperProject/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/RipperProject/RipperProject/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RipperProject/requirements.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RipperProject/users/templates/users/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/RipperProject/users/templates/users/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RipperProject/users/templates/users/logout.html" beforeDir="false" afterPath="$PROJECT_DIR$/RipperProject/users/templates/users/logout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RipperProject/users/templates/users/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/RipperProject/users/templates/users/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RipperProject/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/RipperProject/users/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RipperProject/RipperApp/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RipperProject/RipperApp/migrations/0002_delete_link.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RipperProject/RipperApp/migrations/0003_link.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RipperProject/RipperApp/migrations/0004_auto_20200316_1734.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RipperProject/RipperApp/migrations/0005_song.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RipperProject/RipperApp/migrations/0006_document.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RipperProject/RipperApp/migrations/0007_auto_20200323_2320.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RipperProject/RipperApp/migrations/0008_auto_20200325_2124.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RipperProject/RipperApp/migrations/0009_auto_20200325_2128.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RipperProject/RipperApp/migrations/0010_account.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RipperProject/RipperApp/migrations/0011_auto_20200327_1441.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RipperProject/RipperApp/migrations/0012_song_genre.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RipperProject/RipperApp/migrations/0013_auto_20200402_2219.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RipperProject/RipperApp/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RipperProject/db.sqlite3" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -161,7 +157,9 @@
       <workItem from="1585856394589" duration="19510000" />
       <workItem from="1585951372568" duration="2921000" />
       <workItem from="1585962621347" duration="15715000" />
-      <workItem from="1586020807949" duration="20748000" />
+      <workItem from="1586020807949" duration="20926000" />
+      <workItem from="1586043672929" duration="2000" />
+      <workItem from="1586045656226" duration="1385000" />
     </task>
     <task id="LOCAL-00001" summary="Updated - 3/26">
       <created>1585260946175</created>
@@ -247,7 +245,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586040081420</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Clean up code and add comments.">
+      <created>1586043543091</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1586043543091</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -275,6 +280,7 @@
     <MESSAGE value="Added genre model, added about page, adding download hint." />
     <MESSAGE value="Implemented styling, added about page, more work with Spotify api." />
     <MESSAGE value="Find albums implemented, created delete downloads." />
-    <option name="LAST_COMMIT_MESSAGE" value="Find albums implemented, created delete downloads." />
+    <MESSAGE value="Clean up code and add comments." />
+    <option name="LAST_COMMIT_MESSAGE" value="Clean up code and add comments." />
   </component>
 </project>
