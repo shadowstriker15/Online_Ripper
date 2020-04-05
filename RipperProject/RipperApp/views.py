@@ -76,6 +76,9 @@ def song_edit_view(request):
         if song_form_post.is_valid():
             artist = song_form_post.cleaned_data['artist']
             album = song_form_post.cleaned_data['album']
+
+            # Uses album name and artist name to retrieve cover
+            album = album + " " + artist
             album_path = find_cover(album, user)
             if not album_path:
                 messages.error(request, f'Album cover was not found')
