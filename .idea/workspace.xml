@@ -146,7 +146,7 @@
       <workItem from="1586020807949" duration="20926000" />
       <workItem from="1586043672929" duration="2000" />
       <workItem from="1586045656226" duration="2005000" />
-      <workItem from="1586053662772" duration="3218000" />
+      <workItem from="1586053662772" duration="4479000" />
     </task>
     <task id="LOCAL-00001" summary="Updated - 3/26">
       <created>1585260946175</created>
@@ -253,7 +253,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586053972725</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Updated homepage helper paragraphs.">
+      <created>1586062913059</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1586062913059</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -284,6 +291,7 @@
     <MESSAGE value="Clean up code and add comments." />
     <MESSAGE value="New database." />
     <MESSAGE value="No database." />
-    <option name="LAST_COMMIT_MESSAGE" value="No database." />
+    <MESSAGE value="Updated homepage helper paragraphs." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated homepage helper paragraphs." />
   </component>
 </project>
