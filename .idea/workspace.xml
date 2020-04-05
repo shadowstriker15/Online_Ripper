@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="06e6c06b-7f60-4add-a7b1-d45e1b9ac394" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RipperProject/RipperApp/templates/RipperApp/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/RipperProject/RipperApp/templates/RipperApp/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RipperProject/RipperApp/templates/RipperApp/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/RipperProject/RipperApp/templates/RipperApp/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RipperProject/RipperApp/templates/RipperApp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/RipperProject/RipperApp/templates/RipperApp/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -148,7 +146,8 @@
       <workItem from="1586020807949" duration="20926000" />
       <workItem from="1586043672929" duration="2000" />
       <workItem from="1586045656226" duration="2005000" />
-      <workItem from="1586053662772" duration="5939000" />
+      <workItem from="1586053662772" duration="6601000" />
+      <workItem from="1586105215835" duration="109000" />
     </task>
     <task id="LOCAL-00001" summary="Updated - 3/26">
       <created>1585260946175</created>
@@ -269,7 +268,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586064964882</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Updated index.html and about.html.">
+      <created>1586066394613</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1586066394613</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -302,6 +308,7 @@
     <MESSAGE value="No database." />
     <MESSAGE value="Updated homepage helper paragraphs." />
     <MESSAGE value="Updated homepage helper paragraphs - information about lengths of playlists." />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated homepage helper paragraphs - information about lengths of playlists." />
+    <MESSAGE value="Updated index.html and about.html." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated index.html and about.html." />
   </component>
 </project>
