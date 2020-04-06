@@ -40,13 +40,6 @@ ul {
     color: #da3e00;
 }
 
-table.table tbody tr td,
-table.table thead tr th,
-table.table thead {
-  border-left: 1px solid #659ac9;
-  border-right: 1px solid #659ac9;
-}
-
 form {
     display: inline-block;
 
