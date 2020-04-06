@@ -13,7 +13,7 @@ def get_album(name, title):
 
     # Check if artist is in Spotify's database
     if len(items) == 0:
-        return None
+        return "Invalid", "Invalid"
 
     artist = items[0]
     albums = []
@@ -50,7 +50,16 @@ def get_album(name, title):
     for album in album_dict:
         if title in album_dict[album]:
             cover_album = album
+            cover_link = cover_dict[cover_album]
+            return cover_album, cover_link
 
-    cover_link = cover_dict[cover_album]
+    # Track not in album or artist only has singles
+    album = title + " " + name
+    results = sp.search(q='album:' + album, type='album')
 
-    return cover_album, cover_link
+    # Can't find album cover
+    if len(results['albums']['items']) == 0:
+        return "Invalid", "Invalid"
+
+    cover = str(results['albums']['items'][0]['images'][0]['url'])
+    return album, cover

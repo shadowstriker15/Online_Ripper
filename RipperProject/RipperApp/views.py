@@ -68,7 +68,7 @@ def song_edit_view(request):
 
             album, cover_link = get_album(artist, title)
 
-            if not cover_link:
+            if album == "Invalid":
                 messages.error(request, f'Could not set album name and cover')
                 album_path = None
             else:
