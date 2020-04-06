@@ -24,45 +24,6 @@
                 {% endif %}
             </div>
 
-            <div class="col-md-6">
-                {% if path_num != 0 %}
-                    <div class="row">
-                        <div class="mx-auto">
-                            <form method="POST" action="/get-albums/"> {% csrf_token %}
-                                {{ artist_form }} <input type="submit" class="btn btn-secondary" value="Find Albums"/>
-                            </form>
-                        </div>
-                    </div>
-                    {% if album_list %}
-                        <table class="table-striped table table-bordered table-hover">
-                            <tr>
-                                <th style="text-align: center" colspan="2">
-                                    <h5><strong>Albums by <i>{{ artist_name }}</i></strong></h5>
-                                </th>
-                            </tr>
-                            <tr>
-                                <th style="text-align: center">
-                                    Album
-                                </th>
-                                <th style="text-align: center">
-                                    Spotify Link
-                                </th>
-                            </tr>
-                            {% for album, album_link in album_list %}
-                                <tr>
-                                    <td width="50%">
-                                        <span>{{ album }}</span>
-                                    </td>
-                                    <td width="50%" style="text-align: center">
-                                        <a href={{ album_link }}>Click Here</a>
-                                    </td>
-                                </tr>
-                            {% endfor %}
-                        </table>
-                    {% endif %}
-                {% endif %}
-            </div>
-
         </div>
     </div>
 
