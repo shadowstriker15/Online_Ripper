@@ -8,6 +8,7 @@ class Link(models.Model):
 class Song(models.Model):
     genreList = (("No genre", " "),
                  ("Alternative", "Alternative"),
+                 ("Alternative/Indie", "Alternative/Indie"),
                  ("Blues/R&B", "Blues/R&B"),
                  ("Books & Spoken", "Books & Spoken"),
                  ("Children's Music", "Children's Music"),
