@@ -3,6 +3,7 @@ import spotipy
 
 
 def get_album(name, title):
+    artist_name = name
     client_id = ""
     client_secret = ""
     client_credentials_manager = SpotifyClientCredentials(client_id=client_id, client_secret=client_secret)
@@ -54,7 +55,7 @@ def get_album(name, title):
             return cover_album, cover_link
 
     # Track not in album or artist only has singles
-    album = title + " " + name
+    album = title + " " + artist_name
     results = sp.search(q='album:' + album, type='album')
 
     # Can't find album cover
