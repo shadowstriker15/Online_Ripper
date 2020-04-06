@@ -63,4 +63,4 @@ def get_album(name, title):
         return "Invalid", "Invalid"
 
     cover = str(results['albums']['items'][0]['images'][0]['url'])
-    return album, cover
+    return title, cover
