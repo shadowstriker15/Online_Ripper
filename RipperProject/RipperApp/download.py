@@ -11,7 +11,7 @@ def yt_download(link, account):
     user = str(account)
     out_path = os.path.join(home, 'Users', user, 'Downloads', '%(title)s.%(ext)s')
 
-    cookie_file = os.path.join(home, 'Users', 'Cookies', 'cookies.txt')
+    cookie_file = os.path.join(home, 'Cookies', 'cookies.txt')
 
     # Create archive if a playlist link
     if "playlist" in link:
@@ -24,12 +24,12 @@ def yt_download(link, account):
         archive_file = os.path.join(home, 'Users', user, 'Downloads', 'Archives', query, 'archive.txt')
 
         download_options = {
+            'cachedir': 'False',
             'format': 'bestaudio/best',
             'outtmpl': out_path,
             'nocheckcertificate': True,
             'download_archive': archive_file,
             'cookiefile': cookie_file,
-            'proxy': 'https://us4.proxysite.com/process.php?d=1oSAfHM7T5i3JcbzAIdFuxodHkE%3D&b=9',
             'postprocessors': [{
                 'key': 'FFmpegExtractAudio',
                 'preferredcodec': 'mp3',
@@ -39,6 +39,7 @@ def yt_download(link, account):
 
     else:
         download_options = {
+            'cachedir': 'False',
             'format': 'bestaudio/best',
             'outtmpl': out_path,
             'nocheckcertificate': True,

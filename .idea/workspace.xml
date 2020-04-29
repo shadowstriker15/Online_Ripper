@@ -4,7 +4,6 @@
     <list default="true" id="06e6c06b-7f60-4add-a7b1-d45e1b9ac394" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RipperProject/RipperApp/download.py" beforeDir="false" afterPath="$PROJECT_DIR$/RipperProject/RipperApp/download.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RipperProject/RipperApp/find_album.py" beforeDir="false" afterPath="$PROJECT_DIR$/RipperProject/RipperApp/find_album.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RipperProject/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/RipperProject/db.sqlite3" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -166,7 +165,9 @@
       <workItem from="1586215244161" duration="80000" />
       <workItem from="1586484561849" duration="5235000" />
       <workItem from="1587064748695" duration="24000" />
-      <workItem from="1587068914963" duration="1978000" />
+      <workItem from="1587068914963" duration="2088000" />
+      <workItem from="1587092523457" duration="957000" />
+      <workItem from="1588124271468" duration="1228000" />
     </task>
     <task id="LOCAL-00001" summary="Updated - 3/26">
       <created>1585260946175</created>
@@ -364,7 +365,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586215301770</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Drastically improved efficiency with Spotify API in retrieving album name and cover.">
+      <created>1587072121311</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1587072121311</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -408,6 +416,7 @@
     <MESSAGE value="Fixed error in passing the wrong name for artist in find_album.py" />
     <MESSAGE value="Fixed error of setting wrong names for album name if album is not found." />
     <MESSAGE value="Removed styling for tables." />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed styling for tables." />
+    <MESSAGE value="Drastically improved efficiency with Spotify API in retrieving album name and cover." />
+    <option name="LAST_COMMIT_MESSAGE" value="Drastically improved efficiency with Spotify API in retrieving album name and cover." />
   </component>
 </project>
