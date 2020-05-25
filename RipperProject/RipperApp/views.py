@@ -12,7 +12,7 @@ from .edit_song import editor
 from .find_album import get_album
 
 
-def home_view(request, account_name=None):
+def home_view(request):
     if not request.user.is_authenticated:
         messages.info(request, f'Please register or login to download')
     current_user = request.user
@@ -56,7 +56,7 @@ def song_edit_view(request):
         context.update({"file_name": file_name})
     else:
         context.update({'path_num': 0})
-        messages.info(request, f'No more new downloaded songs')
+        messages.info(request, f'No more downloaded songs')
 
     if request.method == "POST":
         song_form_post = RawSongForm(request.POST)
@@ -107,12 +107,7 @@ def get_song_list(request):
 
 def next_page(request):
     path_list = get_path_list(request)
-
-    # Check if there is a next song
-    if len(path_list) == 1:
-        os.remove(path_list[0])
-    else:
-        os.remove(path_list[0])
+    os.remove(path_list[0])
     return song_edit_view(request)
 
 
