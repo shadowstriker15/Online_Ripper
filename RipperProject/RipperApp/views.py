@@ -55,6 +55,9 @@ def song_edit_view(request):
         file_name = file_list[0]
         context.update({"file_name": file_name})
 
+        #Remove file extension
+        file_name = os.path.splitext(file_name)[0]
+
         # Remove text contained in parentheses
         if '(' and ')' in file_name:
             end_index = file_name.find('(') - 1
