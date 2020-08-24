@@ -59,7 +59,7 @@ def song_edit_view(request):
         if '(' and ')' in file_name:
             end_index = file_name.find('(') - 1
             file_name = file_name[:end_index]
-        # Remove text contained in square brackets\
+        # Remove text contained in square brackets
         if '[' and ']' in file_name:
             end_index = file_name.find('[') - 1
             file_name = file_name[:end_index]
