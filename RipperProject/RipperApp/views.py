@@ -54,6 +54,22 @@ def song_edit_view(request):
     if len(path_list) != 0:
         file_name = file_list[0]
         context.update({"file_name": file_name})
+
+        # Remove text contained in parentheses
+        if '(' and ')' in file_name:
+            end_index = file_name.find('(') - 1
+            file_name = file_name[:end_index]
+        # Remove text contained in square brackets\
+        if '[' and ']' in file_name:
+            end_index = file_name.find('[') - 1
+            file_name = file_name[:end_index]
+        # Find artist and title from file name
+        if '-' in file_name:
+            file_name = file_name.split(' - ', 1)
+            song_form = RawSongForm(initial={'artist': file_name[0], 'title': file_name[1]})
+        else:
+            song_form = RawSongForm(initial={'title': file_name})
+        context.update({'song_form': song_form})
     else:
         context.update({'path_num': 0})
         messages.info(request, f'No more downloaded songs')
